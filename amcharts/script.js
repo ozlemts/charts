@@ -187,7 +187,7 @@ piechart.data = [{
   "name": "Burak",
   "share": 20
 }, {
-  "name": "Others",
+  "name": "Martin Maourini",
   "share": 5
 }];
 
@@ -195,6 +195,14 @@ piechart.data = [{
 var pieSeries = piechart.series.push(new am4charts.PieSeries());
 pieSeries.dataFields.value = "share";
 pieSeries.dataFields.category = "name";
-pieSeries.slices.template.events.on("hit", (event) => {
 
+// Team Member Details
+
+var teams_member = [];
+teams_member.push({name:"John Doe", title:"Founder", cv:"jkewfeeeedwek"});
+teams_member.push({name:"Mert Smith", title:"Cofounder", cv:"ewfew"});
+teams_member.push({name:"Burak", title:"Founder", cv:"jkewfewdwek"});
+teams_member.push({name:"Martin Maourini", title:"Founder", cv:"jkddcewwek"});
+pieSeries.slices.template.events.on("hit", (event) => {
+console.log(event.target.dataItem.category)
   });
