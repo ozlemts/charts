@@ -1,18 +1,5 @@
-/**
- * ---------------------------------------
- * This demo was created using amCharts 4.
- * 
- * For more information visit:
- * https://www.amcharts.com/
- * 
- * Documentation is available at:
- * https://www.amcharts.com/docs/v4/
- * ---------------------------------------
- */
 
-// Themes begin
 am4core.useTheme(am4themes_animated);
-// Themes end
 
 var chart = am4core.create("chartdiv", am4plugins_timeline.SerpentineChart);
 chart.curveContainer.padding(100, 20, 50, 20);
@@ -28,79 +15,79 @@ chart.dateFormatter.dateFormat = "yyyy-MM-dd";
 
 chart.data = [{
     "category": "",
-    "start": "2019-01-12",
+    "start": "2019-01-15",
     "end": "2019-03-15",
     "color": colorSet.getIndex(15),
     "text": "Ideation, Market Research",
     "textDisabled": false,
-    "icon": ""
+    "icon": "img/start.png"
 }, {
     "category": "",
-    "start": "2019-03-12",
-    "end": "2019-04-14",
+    "start": "2019-03-15",
+    "end": "2019-04-15",
     "text": "Product, market fit",
     "textDisabled": false,
     "color": colorSet.getIndex(14),
-    "icon": "/wp-content/uploads/assets/timeline/timeline1.svg"
+    "icon": "img/teams.png"
 },
 {
     "category": "",
-    "start": "2019-04-12",
-    "end": "2019-07-12",
+    "start": "2019-04-15",
+    "end": "2019-07-15",
     "text": "MVP launch",
     "textDisabled": false,
     "color": colorSet.getIndex(13),
-    "icon": "https://www.flaticon.com/free-icon/gantt-chart_2657900"
+    "icon": "img/location.png"
 },
 {
     "category": "",
-    "start": "2019-06-12",
-    "end": "2019-09-12",
+    "start": "2019-06-15",
+    "end": "2019-09-15",
     "text": "Reported MVP results",
     "textDisabled": false,
     "color": colorSet.getIndex(12),
-    "icon": "/wp-content/uploads/assets/timeline/timeline2.svg"
+    "icon": "img/location.png"
 },
 {
     "category": "",
-    "start": "2019-09-12",
-    "end": "2019-11-12",
+    "start": "2019-09-15",
+    "end": "2019-11-15",
     "color": colorSet.getIndex(9),
     "text": "10.000 user target accomplished",
     "textDisabled": false,
     "textDisabled": false,
-    "icon": "/wp-content/uploads/assets/timeline/timeline3.svg"
+    "icon": "img/location.png"
 },
 {
     "category": "",
-    "start": "2019-11-12",
-    "end": "2020-01-12",
+    "start": "2019-11-15",
+    "end": "2020-01-15",
     "text": "Exit 1 ",
     "textDisabled": false,
     "color": colorSet.getIndex(8),
-    "icon": "/wp-content/uploads/assets/timeline/timeline2.svg"
+    "icon": "img/success.png"
 },
 {
     "category": "",
-    "start": "2020-01-12",
-    "end": "2020-03-12",
+    "start": "2020-01-15",
+    "end": "2020-03-15",
     "text": "Exit 2",
     "textDisabled": false,
     "color": colorSet.getIndex(7),
-    "icon": "/wp-content/uploads/assets/timeline/timeline4.svg"
+    "icon": "img/success.png"
 },
 {
     "category": "",
-    "start": "2020-03-12",
-    "end": "2020-03-16",
+    "start": "2020-03-15",
+    "end": "2020-03-15",
     "text": "Exit 3 ",
     "textDisabled": false,
     "color": colorSet.getIndex(8),
-    "icon": "/wp-content/uploads/assets/timeline/timeline2.svg"
+    "icon": "img/location.png"
 }];
 
 chart.fontSize = 16;
-chart.tooltipContainer.fontSize = 11;
+chart.tooltipContainer.fontSize = 16;
 
 var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
 categoryAxis.dataFields.category = "category";
@@ -183,4 +170,31 @@ label.isMeasured = false;
 label.y = am4core.percent(50);
 label.x = am4core.percent(50);
 label.horizontalCenter = "middle";
-label.fontSize = 20;
+label.fontSize = 24;
+
+//PIE CHART
+
+var piechart = am4core.create("piechartdiv", am4charts.PieChart);
+
+// Add data
+piechart.data = [{
+  "name": "Özlem T",
+  "share": 5
+}, {
+  "name": "Mert S",
+  "share": 70
+}, {
+  "name": "Burak S",
+  "share": 20
+}, {
+  "name": "Others",
+  "share": 5
+}];
+
+// Add and configure Series
+var pieSeries = piechart.series.push(new am4charts.PieSeries());
+pieSeries.dataFields.value = "share";
+pieSeries.dataFields.category = "name";
+pieSeries.slices.template.events.on("hit", (event) => {
+    
+  });

@@ -7,7 +7,17 @@ body {
   height: 600px;
 }
 
+#piechartdiv {
+  width: 100%;
+  height: 400px;
+}
+
 .label {
   display: flex;
   justify-content: center;
+  color: rgba(black, .6);
+  background: -webkit-linear-gradient(rgb(220, 189, 103), rgb(220, 103, 136));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
