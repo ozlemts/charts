@@ -178,13 +178,13 @@ var piechart = am4core.create("piechartdiv", am4charts.PieChart);
 
 // Add data
 piechart.data = [{
-  "name": "Özlem T",
+  "name": "John Doe",
   "share": 5
 }, {
-  "name": "Mert S",
+  "name": "Mert Smith",
   "share": 70
 }, {
-  "name": "Burak S",
+  "name": "Burak",
   "share": 20
 }, {
   "name": "Others",
@@ -196,5 +196,5 @@ var pieSeries = piechart.series.push(new am4charts.PieSeries());
 pieSeries.dataFields.value = "share";
 pieSeries.dataFields.category = "name";
 pieSeries.slices.template.events.on("hit", (event) => {
-    
+
   });

@@ -9,7 +9,7 @@ body {
 
 #piechartdiv {
   width: 100%;
-  height: 400px;
+  height: 300px;
 }
 
 .label {
@@ -21,3 +21,9 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+
+
+.team-img {
+  border-radius: 100%;
+  height: 8rem;
+}

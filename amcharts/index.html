@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>amcharts</title>
 	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="https://cdn.vklab.net/bootstrap.css">
+	<link rel="stylesheet" href="https://cdn.vklab.net/bootstrap.js">
 	<script src="https://www.amcharts.com/lib/4/core.js"></script>
 	<script src="https://www.amcharts.com/lib/4/charts.js"></script>
 	<script src="https://www.amcharts.com/lib/4/plugins/timeline.js"></script>
@@ -15,9 +17,39 @@
 		<h2 class="label">Process of Startups</h2>
 		<div id="chartdiv"></div>
 	</div>
-	<div class="piechart">
-		<h2 class="label">Shares and Team Members</h2>
-		<div id="piechartdiv"></div>
+	<div class="piechart my-5">
+		<h2 class="label my-5">Shares and Team Members</h2>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div id="piechartdiv"></div>
+					</div>
+					<div class="col-md-6">
+						<div class="team-member-card">
+							<div class="d-flex">
+								<img src="img/unnamed.png" alt="team-member-photo" class="team-img shadow">
+								<div class="team-member-title ml-3 d-flex flex-column align-items-center justify-items-center">
+									<h3>John Doe</h3>
+									<h3>Founder</h3>
+								</div>
+							</div>
+							<p class="my-3">
+								EDUCATION <br>
+								
+								Tech Maharaja Engineering College, May 2014
+								Shiri Ganga Higher Secondary School, March 2012
+								Government Boys Higher Secondary School, March 2010
+								TECHNICAL EXPERIENCE <br>
+								
+								Languages: C, Core Java, VB 6.0, Unix shell scripts, HTML
+								Platforms: Windows XP/98/95/00, NT, Red Hat Linux (9.0, ES, WS)
+								<br>
+								Concepts: networking, operating systems <br>
+								Expertise in: Installing Red Hat Linux configuring servers (DNS, FTP, NFS, NIS, SAMBA, APACHE, DHCP, MAIL), troubleshooting, user permissions (LVM)</p>
+						</div>
+					</div>
+				</div>
+		</div>
 	</div>
 	
 	<script  src="./script.js"></script>
