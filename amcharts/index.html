@@ -13,39 +13,65 @@
 	<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 </head>
 <body>
-	<div class="timeline">
+	<div class="timeline d-none">
 		<h2 class="label">Process of Startups</h2>
 		<div id="chartdiv"></div>
 	</div>
 	<div class="piechart my-5">
-		<h2 class="label my-5">Shares and Team Members</h2>
-			<div class="container">
+		<h2 class="title my-5 font-weight-normal text-center">Shares and Team Members</h2>
+			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-6">
-						<div id="piechartdiv"></div>
+					<div class="col-md-6 d-flex align-items-center justify-content-center">
+						<div id="piechartdiv" class="bg-dark-blue"></div>
 					</div>
-					<div class="col-md-6">
-						<div class="team-member-card">
+					<div class="col-md-6 px-5 py-2">
+						<div id="1" class="team-member-card">
 							<div class="d-flex">
-								<img src="img/unnamed.png" alt="team-member-photo" class="team-img shadow">
-								<div class="team-member-title ml-3 d-flex flex-column align-items-center justify-items-center">
-									<h3>John Doe</h3>
-									<h3>Founder</h3>
+								<img src="img/steve-jobs.jpeg" alt="team-member-photo" class="team-img shadow">
+								<div class="team-member-title ml-3 d-flex flex-column align-items-center justify-content-center">
+									<h3 class="font-weight-normal">Steve Jobs</h3>
+									<h4 class="font-italic font-weight-light">CoFounder</h4>
 								</div>
 							</div>
-							<p class="my-3">
-								EDUCATION <br>
-								
-								Tech Maharaja Engineering College, May 2014
-								Shiri Ganga Higher Secondary School, March 2012
-								Government Boys Higher Secondary School, March 2010
-								TECHNICAL EXPERIENCE <br>
-								
-								Languages: C, Core Java, VB 6.0, Unix shell scripts, HTML
-								Platforms: Windows XP/98/95/00, NT, Red Hat Linux (9.0, ES, WS)
-								<br>
-								Concepts: networking, operating systems <br>
-								Expertise in: Installing Red Hat Linux configuring servers (DNS, FTP, NFS, NIS, SAMBA, APACHE, DHCP, MAIL), troubleshooting, user permissions (LVM)</p>
+							<p class="my-3">Steven Paul Jobs (/dʒɒbz/; February 24, 1955 – October 5, 2011) was an American business magnate, industrial designer, investor, and media proprietor. He was the chairman, chief executive officer (CEO), and co-founder of Apple Inc., the chairman and majority shareholder of Pixar, a member of The Walt Disney Company's board of directors following its acquisition of Pixar, and the founder, chairman, and CEO of NeXT. Jobs is widely recognized as a pioneer of the personal computer revolution of the 1970s and 1980s, along with Apple co-founder Steve Wozniak.</p>
+							<p>Jobs was born in San Francisco, California, and put up for adoption. He was raised in the San Francisco Bay Area. He attended Reed College in 1972 before dropping out that same year, and traveled through India in 1974 seeking enlightenment and studying Zen Buddhism. His declassified FBI report states that he used marijuana and LSD while he was in college, and once told a reporter that taking LSD was "one of the two or three most important things" he had done in his life.</p>
+							<p class="small font-italic">Source Wikipedia</p>
+						</div>
+						<div id="2" class="team-member-card d-none">
+							<div class="d-flex">
+								<img src="img/dennis-ritchie.jpg" alt="team-member-photo" class="team-img shadow">
+								<div class="team-member-title ml-3 d-flex flex-column align-items-center justify-content-center">
+									<h3 class="font-weight-normal">Dennis Ritchie</h3>
+									<h4 class="font-italic font-weight-light">Founder</h4>
+								</div>
+							</div>
+							<p class="my-3">Dennis MacAlistair Ritchie (September 9, 1941 – c. October 12, 2011)[2][3][4][5] was an American computer scientist.[2] He created the C programming language and, with long-time colleague Ken Thompson, the Unix operating system and B programming language.[2] Ritchie and Thompson were awarded the Turing Award from the ACM in 1983, the Hamming Medal from the IEEE in 1990 and the National Medal of Technology from President Bill Clinton in 1999. Ritchie was the head of Lucent Technologies System Software Research Department when he retired in 2007. He was the "R" in K&R C, and commonly known by his username dmr.</p>
+							<p>Dennis Ritchie was born in Bronxville, New York. His father was Alistair E. Ritchie, a longtime Bell Labs scientist and co-author of The Design of Switching Circuits on switching circuit theory.[6] As a child, Dennis moved with his family to Summit, New Jersey, where he graduated from Summit High School.[7] He graduated from Harvard University with degrees in physics and applied mathematics.[6]</p>
+							<p class="small font-italic">Source Wikipedia</p>
+						</div>
+						<div id="3" class="team-member-card d-none">
+							<div class="d-flex">
+								<img src="img/bill_gates.jpg" alt="team-member-photo" class="team-img shadow">
+								<div class="team-member-title ml-3 d-flex flex-column align-items-center justify-content-center">
+									<h3 class="font-weight-normal">Bill Gates</h3>
+									<h4 class="font-italic font-weight-light">Founder</h4>
+								</div>
+							</div>
+							<p class="my-3">Entrepreneur and businessman Bill Gates and his business partner Paul Allen founded and built the world's largest software business, Microsoft, through technological innovation, keen business strategy and aggressive business tactics. In the process, Gates became one of the richest men in the world. In February 2014, Gates announced that he was stepping down as Microsoft's chairman to focus on charitable work at his foundation, the Bill and Melinda Gates Foundation.</p>
+							<p>Gates was born William Henry Gates III on October 28, 1955, in Seattle, Washington. Gates grew up in an upper-middle-class family with his older sister, Kristianne, and younger sister, Libby. Their father, William H. Gates Sr., was a promising, if somewhat shy, law student when he met his future wife, Mary Maxwell. She was an athletic, outgoing student at the University of Washington, actively involved in student affairs and leadership.</p>
+							<p class="small font-italic">Source Wikipedia</p>
+						</div>
+						<div id="4" class="team-member-card d-none">
+							<div class="d-flex">
+								<img src="img/aaron.jpg" alt="team-member-photo" class="team-img shadow">
+								<div class="team-member-title ml-3 d-flex flex-column align-items-center justify-content-center">
+									<h3 class="font-weight-normal">Aaron Hillel Swartz</h3>
+									<h4 class="font-italic font-weight-light">Founder</h4>
+								</div>
+							</div>
+							<p class="my-3">Aaron Hillel Swartz (November 8, 1986 – January 11, 2013) was an American computer programmer, entrepreneur, writer, political organizer, and Internet hacktivist. He was involved in the development of the web feed format RSS,[3] the Markdown publishing format,[4] the organization Creative Commons,[5] and the website framework web.py,[6] and was a co-founder of the social news site Reddit. He was given the title of co-founder by Y Combinator owner Paul Graham after the formation of Not a Bug, Inc. (a merger of Swartz's project Infogami and Reddit, a company run by Alexis Ohanian and Steve Huffman).</p>
+							<p>Swartz's work also focused on civic awareness and activism.[7][8] He helped launch the Progressive Change Campaign Committee in 2009 to learn more about effective online activism. In 2010, he became a research fellow at Harvard University's Safra Research Lab on Institutional Corruption, directed by Lawrence Lessig.[9][10] He founded the online group Demand Progress, known for its campaign against the Stop Online Piracy Act.</p>
+							<p class="small font-italic">Source Wikipedia</p>
 						</div>
 					</div>
 				</div>

@@ -1,5 +1,11 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #2B3648!important;
+  color: rgba(255,255,255,.6);
+}
+
+p,h1,h2,h3,h4,h5,h6 {
+  color: rgba(255,255,255,.6);
 }
 
 #chartdiv {
@@ -9,21 +15,28 @@ body {
 
 #piechartdiv {
   width: 100%;
-  height: 300px;
+  height: 450px;
 }
 
+.title {
+  color: #AFBDD1;
+}
 .label {
   display: flex;
   justify-content: center;
-  color: rgba(black, .6);
+  color: rgba(0,0,0, .6);
   background: -webkit-linear-gradient(rgb(220, 189, 103), rgb(220, 103, 136));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-
-
 .team-img {
   border-radius: 100%;
   height: 8rem;
+  width: 8rem;
+}
+
+.bg-dark-blue {
+  background-color: #212936;
+  border-radius: 6px;
 }

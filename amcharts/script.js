@@ -178,31 +178,47 @@ var piechart = am4core.create("piechartdiv", am4charts.PieChart);
 
 // Add data
 piechart.data = [{
-  "name": "John Doe",
-  "share": 5
+    "id": "1",
+    "name": "Steve Jobs",
+    "share": 15
 }, {
-  "name": "Mert Smith",
-  "share": 70
-}, {
-  "name": "Burak",
+    "id": "2",
+  "name": "Dennis Ritchie",
   "share": 20
 }, {
-  "name": "Martin Maourini",
-  "share": 5
+    "id": "3",
+  "name": "Bill Gates",
+  "share": 40
+}, {
+    "id": "4",
+  "name": "Aaron Swartz",
+  "share": 25
 }];
 
 // Add and configure Series
 var pieSeries = piechart.series.push(new am4charts.PieSeries());
 pieSeries.dataFields.value = "share";
 pieSeries.dataFields.category = "name";
-
+pieSeries.dataFields.id = "id";
+console.log(pieSeries.labels.template.fill._value );
+pieSeries.labels.template.fill._value = {r: 255, g: 255, b: 255, a: 0.6};
 // Team Member Details
 
 var teams_member = [];
-teams_member.push({name:"John Doe", title:"Founder", cv:"jkewfeeeedwek"});
-teams_member.push({name:"Mert Smith", title:"Cofounder", cv:"ewfew"});
-teams_member.push({name:"Burak", title:"Founder", cv:"jkewfewdwek"});
-teams_member.push({name:"Martin Maourini", title:"Founder", cv:"jkddcewwek"});
-pieSeries.slices.template.events.on("hit", (event) => {
-console.log(event.target.dataItem.category)
+teams_member.push({id:"1", name:"Steve Jobs", title:"Founder", cv:"jkewfeeeedwek"});
+teams_member.push({id:"2", name:"Dennis Ritchie", title:"Cofounder", cv:"ewfew"});
+teams_member.push({id:"3", name:"Bill Gates", title:"CoFounder", cv:"jkewfewdwek"});
+teams_member.push({id:"4", name:"Auron Swartz", title:"Founder", cv:"jkddcewwek"});
+pieSeries.slices.template.events.on("hit", (event) =>
+{
+    var clicked_id = event.target.dataItem.id;
+    console.log(piechart.data);
+    document.querySelectorAll(".team-member-card").forEach(element =>
+        {
+            element.classList.add("d-none");
+            if (element.getAttribute('id') == clicked_id)
+                element.classList.toggle("d-none");
+        }
+    )
+
   });
